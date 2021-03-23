@@ -1,4 +1,4 @@
-## Welcome to Kebur Fantahun's personal GitHub website
+### Welcome to Kebur Fantahun's personal GitHub website
 
 ### Markdown
 
