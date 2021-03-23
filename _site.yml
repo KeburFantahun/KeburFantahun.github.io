@@ -8,3 +8,6 @@ navbar:
       href: bio.html
     - text: "Beers Analysis"
       href: BeersAndBrews.html
+# Make sure to run 
+# library(rmarkdown)
+# "render_site()"
