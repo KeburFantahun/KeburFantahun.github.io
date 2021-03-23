@@ -4,5 +4,7 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "BeersAndBrews"
+    - text: "About Me"
+      href: bio.html
+    - text: "Beers Analysis"
       href: BeersAndBrews.html
