@@ -1,0 +1,14 @@
+---
+title: "Simple Website"
+author: "Kebur"
+date: "March 23, 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# The simple yet awesome website
+## Note: The 6 lines of text above are the YAML tags
+### we will knit the RMD to a html file next
+Then push index.html to the github.io repo. 
