@@ -1,0 +1,10 @@
+name: beerdatainput
+title:
+username:
+account: kfanta
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3839039
+bundleId: 4385078
+url: https://kfanta.shinyapps.io/beerdatainput/
+when: 1616513444.00857
