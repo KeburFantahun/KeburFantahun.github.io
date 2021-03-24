@@ -1,0 +1,12 @@
+name: ABV_Hist
+title: ABV_Hist
+username:
+account: kfanta
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3841874
+bundleId: 4387109
+url: https://kfanta.shinyapps.io/ABV_Hist/
+when: 1616547352.97785
+asMultiple: FALSE
+asStatic: FALSE

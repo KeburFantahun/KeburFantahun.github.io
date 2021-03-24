@@ -2,10 +2,14 @@ name: "my-website"
 navbar:
   title: "My Website"
   left:
+    - text: "Home"
+      href: index.html
     - text: "About Me"
       href: bio.html
     - text: "Beers Analysis"
       href: BeersAndBrews.html
+    - text: "Interact with Beer Data"
+      href: BeerInteract.html
 # Make sure to run 
 # library(rmarkdown)
 # "render_site()"

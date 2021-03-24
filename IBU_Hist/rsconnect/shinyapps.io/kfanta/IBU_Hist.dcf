@@ -1,0 +1,12 @@
+name: IBU_Hist
+title: IBU_Hist
+username:
+account: kfanta
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3841780
+bundleId: 4387024
+url: https://kfanta.shinyapps.io/IBU_Hist/
+when: 1616545847.49312
+asMultiple: FALSE
+asStatic: FALSE

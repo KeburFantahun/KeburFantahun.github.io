@@ -251,10 +251,16 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
   <a href="bio.html">About Me</a>
 </li>
 <li>
   <a href="BeersAndBrews.html">Beers Analysis</a>
+</li>
+<li>
+  <a href="BeerInteract.html">Interact with Beer Data</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -534,8 +540,8 @@ $(document).ready(function () {
 <h1>1. How many breweries are in each state?</h1>
 <p>There are a range of breweries for state and they are visible in the state. This could be due to a variety of reasons such as taxation, availability and cost of materials, releastate, demographics or that state etc. In our dataset, Colorado for example has 47 craft breweries and California has 39 craft breweries and Arizona has 11. This dataset obviously does not represent all craft breweries in the state, so it is important to note that it is the relative proportion of craft breweries we are interested in here. In many cases, the craft brewery number is most likely tied to state population. See the Pie chart for the breakdown. See Table:</p>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<div id="htmlwidget-ebe7d4012e571e9a5b17" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ebe7d4012e571e9a5b17">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51"],["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"],[7,3,2,11,39,47,8,1,2,15,7,4,5,5,18,22,3,4,5,23,7,9,32,12,9,2,9,19,1,5,3,3,4,2,16,15,6,29,25,5,4,1,3,28,4,16,10,23,20,1,4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>State<\/th>\n      <th>unique_breweries<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fb17bf0fdb2630dfae51" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fb17bf0fdb2630dfae51">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51"],["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"],[7,3,2,11,39,47,8,1,2,15,7,4,5,5,18,22,3,4,5,23,7,9,32,12,9,2,9,19,1,5,3,3,4,2,16,15,6,29,25,5,4,1,3,28,4,16,10,23,20,1,4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>State<\/th>\n      <th>unique_breweries<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <pre><code>## [1] &quot;Total Unique Breweries: &quot;</code></pre>
 <pre><code>## [1] 558</code></pre>
 <p><img src="BeersAndBrews_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
@@ -559,22 +565,22 @@ $(document).ready(function () {
 ##     Brewery 0.000000000
 ##        City 0.000000000
 ##       State 0.000000000</code></pre>
-<pre><code>##    Brewery_id     Drink_name           Beer_ID            ABV               IBU            Style               Ounces     
-##  Min.   :  1.0   Length:2410        Min.   :   1.0   Min.   :0.00100   Min.   :  4.00   Length:2410        Min.   : 8.40  
-##  1st Qu.: 94.0   Class :character   1st Qu.: 808.2   1st Qu.:0.05000   1st Qu.: 21.00   Class :character   1st Qu.:12.00  
-##  Median :206.0   Mode  :character   Median :1453.5   Median :0.05600   Median : 35.00   Mode  :character   Median :12.00  
-##  Mean   :232.7                      Mean   :1431.1   Mean   :0.05977   Mean   : 42.71                      Mean   :13.59  
-##  3rd Qu.:367.0                      3rd Qu.:2075.8   3rd Qu.:0.06700   3rd Qu.: 64.00                      3rd Qu.:16.00  
-##  Max.   :558.0                      Max.   :2692.0   Max.   :0.12800   Max.   :138.00                      Max.   :32.00  
-##                                                      NA&#39;s   :62        NA&#39;s   :1005                                       
-##    Brewery              City               State     
-##  Length:2410        Length:2410        CO     : 265  
-##  Class :character   Class :character   CA     : 183  
-##  Mode  :character   Mode  :character   MI     : 162  
-##                                        IN     : 139  
-##                                        TX     : 130  
-##                                        OR     : 125  
-##                                        (Other):1406</code></pre>
+<pre><code>##    Brewery_id     Drink_name           Beer_ID            ABV               IBU            Style               Ounces        Brewery         
+##  Min.   :  1.0   Length:2410        Min.   :   1.0   Min.   :0.00100   Min.   :  4.00   Length:2410        Min.   : 8.40   Length:2410       
+##  1st Qu.: 94.0   Class :character   1st Qu.: 808.2   1st Qu.:0.05000   1st Qu.: 21.00   Class :character   1st Qu.:12.00   Class :character  
+##  Median :206.0   Mode  :character   Median :1453.5   Median :0.05600   Median : 35.00   Mode  :character   Median :12.00   Mode  :character  
+##  Mean   :232.7                      Mean   :1431.1   Mean   :0.05977   Mean   : 42.71                      Mean   :13.59                     
+##  3rd Qu.:367.0                      3rd Qu.:2075.8   3rd Qu.:0.06700   3rd Qu.: 64.00                      3rd Qu.:16.00                     
+##  Max.   :558.0                      Max.   :2692.0   Max.   :0.12800   Max.   :138.00                      Max.   :32.00                     
+##                                                      NA&#39;s   :62        NA&#39;s   :1005                                                          
+##      City               State     
+##  Length:2410        CO     : 265  
+##  Class :character   CA     : 183  
+##  Mode  :character   MI     : 162  
+##                     IN     : 139  
+##                     TX     : 130  
+##                     OR     : 125  
+##                     (Other):1406</code></pre>
 <div id="remove-data-for-entries-missing-both-ibu-and-abv-when-there-is-no-data-online" class="section level3">
 <h3>Remove Data for entries missing both IBU and ABV when there is no data online</h3>
 <ol style="list-style-type: decimal">
@@ -717,8 +723,8 @@ $(document).ready(function () {
 </tbody>
 </table>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<pre><code>##  [1] Style               Brewery_id          ABV                 Drink_name          Ounces              Brewery            
-##  [7] City                State               median_IBU_by_style IBU.clean          
+<pre><code>##  [1] Style               Brewery_id          ABV                 Drink_name          Ounces              Brewery             City               
+##  [8] State               median_IBU_by_style IBU.clean          
 ## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
 <table style="width:100%;">
 <colgroup>
@@ -860,22 +866,22 @@ $(document).ready(function () {
 ##                State     0
 ##  median_IBU_by_style     0
 ##            IBU.clean     0</code></pre>
-<pre><code>##     Style             Brewery_id       ABV           Drink_name            Ounces        Brewery              City          
-##  Length:2348        Min.   :  1   Min.   :0.02700   Length:2348        Min.   : 8.40   Length:2348        Length:2348       
-##  Class :character   1st Qu.: 92   1st Qu.:0.05000   Class :character   1st Qu.:12.00   Class :character   Class :character  
-##  Mode  :character   Median :204   Median :0.05600   Mode  :character   Median :12.00   Mode  :character   Mode  :character  
-##                     Mean   :231   Mean   :0.05967                      Mean   :13.56                                        
-##                     3rd Qu.:366   3rd Qu.:0.06700                      3rd Qu.:16.00                                        
-##                     Max.   :558   Max.   :0.12800                      Max.   :32.00                                        
-##                                                                                                                             
-##      State      median_IBU_by_style   IBU.clean     
-##  CO     : 258   Min.   : 8.00       Min.   :  3.57  
-##  CA     : 181   1st Qu.:21.00       1st Qu.: 21.00  
-##  MI     : 146   Median :30.00       Median : 32.00  
-##  IN     : 139   Mean   :40.03       Mean   : 40.46  
-##  TX     : 129   3rd Qu.:69.00       3rd Qu.: 60.00  
-##  OR     : 115   Max.   :96.00       Max.   :138.00  
-##  (Other):1380</code></pre>
+<pre><code>##     Style             Brewery_id       ABV           Drink_name            Ounces        Brewery              City               State     
+##  Length:2348        Min.   :  1   Min.   :0.02700   Length:2348        Min.   : 8.40   Length:2348        Length:2348        CO     : 258  
+##  Class :character   1st Qu.: 92   1st Qu.:0.05000   Class :character   1st Qu.:12.00   Class :character   Class :character   CA     : 181  
+##  Mode  :character   Median :204   Median :0.05600   Mode  :character   Median :12.00   Mode  :character   Mode  :character   MI     : 146  
+##                     Mean   :231   Mean   :0.05967                      Mean   :13.56                                         IN     : 139  
+##                     3rd Qu.:366   3rd Qu.:0.06700                      3rd Qu.:16.00                                         TX     : 129  
+##                     Max.   :558   Max.   :0.12800                      Max.   :32.00                                         OR     : 115  
+##                                                                                                                              (Other):1380  
+##  median_IBU_by_style   IBU.clean     
+##  Min.   : 8.00       Min.   :  3.57  
+##  1st Qu.:21.00       1st Qu.: 21.00  
+##  Median :30.00       Median : 32.00  
+##  Mean   :40.03       Mean   : 40.46  
+##  3rd Qu.:69.00       3rd Qu.: 60.00  
+##  Max.   :96.00       Max.   :138.00  
+## </code></pre>
 </div>
 </div>
 </div>
@@ -996,10 +1002,10 @@ $(document).ready(function () {
 </tbody>
 </table>
 <pre><code>## [1] &quot;Highest ABV State&quot;</code></pre>
-<pre><code>##              Style Brewery_id   ABV                                           Drink_name Ounces                 Brewery    City
-## 1 Quadrupel (Quad)         52 0.128 Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale   19.2 Upslope Brewing Company Boulder
-##   State median_IBU_by_style IBU.clean
-## 1    CO                  24        24</code></pre>
+<pre><code>##              Style Brewery_id   ABV                                           Drink_name Ounces                 Brewery    City State
+## 1 Quadrupel (Quad)         52 0.128 Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale   19.2 Upslope Brewing Company Boulder    CO
+##   median_IBU_by_style IBU.clean
+## 1                  24        24</code></pre>
 <table>
 <colgroup>
 <col width="17%" />
@@ -1103,10 +1109,10 @@ $(document).ready(function () {
 </tbody>
 </table>
 <pre><code>## [1] &quot;Highest IBU State&quot;</code></pre>
-<pre><code>##                            Style Brewery_id   ABV                Drink_name Ounces                 Brewery    City State
-## 1 American Double / Imperial IPA        375 0.082 Bitter Bitch Imperial IPA     12 Astoria Brewing Company Astoria    OR
-##   median_IBU_by_style IBU.clean
-## 1                90.5       138</code></pre>
+<pre><code>##                            Style Brewery_id   ABV                Drink_name Ounces                 Brewery    City State median_IBU_by_style
+## 1 American Double / Imperial IPA        375 0.082 Bitter Bitch Imperial IPA     12 Astoria Brewing Company Astoria    OR                90.5
+##   IBU.clean
+## 1       138</code></pre>
 </div>
 <div id="summary-statistics-and-histogram-for-abv-and-ibu" class="section level1">
 <h1>6. Summary statistics and Histogram for ABV and IBU</h1>
@@ -1488,82 +1494,59 @@ $(document).ready(function () {
 <li>Then plot IBU and ABV for <code>IPA's</code> and <code>otherAles</code> for IPA's and OtherALes</li>
 </ol>
 <p><strong>Note: American Pale Ale is VERY similar to IPA but we call it &quot;other&quot; ale</strong></p>
-<pre><code>##                    Abbey Single Ale                             Altbier              American Adjunct Lager 
-##                                   2                                  13                                  18 
-##            American Amber / Red Ale          American Amber / Red Lager                 American Barleywine 
-##                                 132                                  28                                   3 
-##                  American Black Ale                 American Blonde Ale                  American Brown Ale 
-##                                  36                                 108                                  70 
-##             American Dark Wheat Ale      American Double / Imperial IPA  American Double / Imperial Pilsner 
-##                                   7                                 105                                   2 
-##    American Double / Imperial Stout           American India Pale Lager                        American IPA 
-##                                   9                                   3                                 423 
-##             American Pale Ale (APA)                 American Pale Lager             American Pale Wheat Ale 
-##                                 244                                  38                                  96 
-##                    American Pilsner                     American Porter                      American Stout 
-##                                  25                                  67                                  39 
-##                 American Strong Ale                  American White IPA                   American Wild Ale 
-##                                  14                                  11                                   6 
-##                       Baltic Porter                    Belgian Dark Ale                         Belgian IPA 
-##                                   6                                  11                                  18 
-##                    Belgian Pale Ale             Belgian Strong Dark Ale             Belgian Strong Pale Ale 
-##                                  24                                   6                                   7 
-##                  Berliner Weissbier                      Bière de Garde                                Bock 
-##                                  11                                   7                                   7 
-##      California Common / Steam Beer                          Chile Beer                           Cream Ale 
-##                                   6                                   3                                  29 
-##                      Czech Pilsener                          Doppelbock           Dortmunder / Export Lager 
-##                                  28                                   7                                   6 
-##                              Dubbel                        Dunkelweizen                  English Barleywine 
-##                                   5                                   4                                   3 
-##                      English Bitter                   English Brown Ale               English Dark Mild Ale 
-##                                   3                                  18                                   6 
-##        English India Pale Ale (IPA)                    English Pale Ale               English Pale Mild Ale 
-##                                  13                                  12                                   3 
-##                       English Stout                  English Strong Ale                     Euro Dark Lager 
-##                                   2                                   4                                   5 
-##                     Euro Pale Lager Extra Special / Strong Bitter (ESB)                  Flanders Oud Bruin 
-##                                   2                                  20                                   1 
-##              Foreign / Export Stout              Fruit / Vegetable Beer                     German Pilsener 
-##                                   6                                  49                                  36 
-##                                Gose                            Grisette                          Hefeweizen 
-##                                  10                                   1                                  40 
-##                Herbed / Spiced Beer                     Irish Dry Stout                       Irish Red Ale 
-##                                   9                                   5                                  12 
-##          Keller Bier / Zwickel Bier                              Kölsch                               Lager 
-##                                   3                                  42                                   1 
-##                         Light Lager               Maibock / Helles Bock                Märzen / Oktoberfest 
-##                                  12                                   5                                  30 
-##                  Milk / Sweet Stout                 Munich Dunkel Lager                 Munich Helles Lager 
-##                                  10                                   4                                  20 
-##                       Oatmeal Stout                             Old Ale                               Other 
-##                                  18                                   2                                   1 
-##                         Pumpkin Ale                    Quadrupel (Quad)                              Radler 
-##                                  23                                   4                                   3 
-##                          Roggenbier              Russian Imperial Stout                            Rye Beer 
-##                                   2                                  11                                  18 
-##              Saison / Farmhouse Ale                         Schwarzbier              Scotch Ale / Wee Heavy 
-##                                  52                                   9                                  15 
-##            Scottish-Style Amber Ale                        Scottish Ale                         Smoked Beer 
-##                                   1                                  19                                   1 
-##                              Tripel                        Vienna Lager                           Wheat Ale 
-##                                  11                                  20                                   1 
-##                       Winter Warmer                             Witbier 
-##                                  15                                  51</code></pre>
-<pre><code>##      Style Brewery_id   ABV                   Drink_name Ounces                         Brewery          City State
-## 1 OtherAle         58 0.049      Abbey&#39;s Single (2015- )     12                 Destihl Brewery   Bloomington    IL
-## 2 OtherAle         58 0.049 Abbey&#39;s Single Ale (Current)     12                 Destihl Brewery   Bloomington    IL
-## 3 OtherAle        361 0.061                  Hot Rod Red     12         Aviator Brewing Company Fuquay-Varina    NC
-## 4 OtherAle        553 0.056      Mickey Finn&#39;s Amber Ale     12           Mickey Finn&#39;s Brewery  Libertyville    IL
-## 5 OtherAle        102 0.052          Hurricane Amber Ale     12 Coastal Extreme Brewing Company       Newport    RI
-## 6 OtherAle         83 0.052    Fat Tire Amber Ale (2011)     12     New Belgium Brewing Company  Fort Collins    CO
-##   median_IBU_by_style IBU.clean
-## 1                  22        22
-## 2                  22        22
-## 3                  30        41
-## 4                  30        30
-## 5                  30        24
-## 6                  30        18</code></pre>
+<pre><code>##                    Abbey Single Ale                             Altbier              American Adjunct Lager            American Amber / Red Ale 
+##                                   2                                  13                                  18                                 132 
+##          American Amber / Red Lager                 American Barleywine                  American Black Ale                 American Blonde Ale 
+##                                  28                                   3                                  36                                 108 
+##                  American Brown Ale             American Dark Wheat Ale      American Double / Imperial IPA  American Double / Imperial Pilsner 
+##                                  70                                   7                                 105                                   2 
+##    American Double / Imperial Stout           American India Pale Lager                        American IPA             American Pale Ale (APA) 
+##                                   9                                   3                                 423                                 244 
+##                 American Pale Lager             American Pale Wheat Ale                    American Pilsner                     American Porter 
+##                                  38                                  96                                  25                                  67 
+##                      American Stout                 American Strong Ale                  American White IPA                   American Wild Ale 
+##                                  39                                  14                                  11                                   6 
+##                       Baltic Porter                    Belgian Dark Ale                         Belgian IPA                    Belgian Pale Ale 
+##                                   6                                  11                                  18                                  24 
+##             Belgian Strong Dark Ale             Belgian Strong Pale Ale                  Berliner Weissbier                      Bière de Garde 
+##                                   6                                   7                                  11                                   7 
+##                                Bock      California Common / Steam Beer                          Chile Beer                           Cream Ale 
+##                                   7                                   6                                   3                                  29 
+##                      Czech Pilsener                          Doppelbock           Dortmunder / Export Lager                              Dubbel 
+##                                  28                                   7                                   6                                   5 
+##                        Dunkelweizen                  English Barleywine                      English Bitter                   English Brown Ale 
+##                                   4                                   3                                   3                                  18 
+##               English Dark Mild Ale        English India Pale Ale (IPA)                    English Pale Ale               English Pale Mild Ale 
+##                                   6                                  13                                  12                                   3 
+##                       English Stout                  English Strong Ale                     Euro Dark Lager                     Euro Pale Lager 
+##                                   2                                   4                                   5                                   2 
+## Extra Special / Strong Bitter (ESB)                  Flanders Oud Bruin              Foreign / Export Stout              Fruit / Vegetable Beer 
+##                                  20                                   1                                   6                                  49 
+##                     German Pilsener                                Gose                            Grisette                          Hefeweizen 
+##                                  36                                  10                                   1                                  40 
+##                Herbed / Spiced Beer                     Irish Dry Stout                       Irish Red Ale          Keller Bier / Zwickel Bier 
+##                                   9                                   5                                  12                                   3 
+##                              Kölsch                               Lager                         Light Lager               Maibock / Helles Bock 
+##                                  42                                   1                                  12                                   5 
+##                Märzen / Oktoberfest                  Milk / Sweet Stout                 Munich Dunkel Lager                 Munich Helles Lager 
+##                                  30                                  10                                   4                                  20 
+##                       Oatmeal Stout                             Old Ale                               Other                         Pumpkin Ale 
+##                                  18                                   2                                   1                                  23 
+##                    Quadrupel (Quad)                              Radler                          Roggenbier              Russian Imperial Stout 
+##                                   4                                   3                                   2                                  11 
+##                            Rye Beer              Saison / Farmhouse Ale                         Schwarzbier              Scotch Ale / Wee Heavy 
+##                                  18                                  52                                   9                                  15 
+##            Scottish-Style Amber Ale                        Scottish Ale                         Smoked Beer                              Tripel 
+##                                   1                                  19                                   1                                  11 
+##                        Vienna Lager                           Wheat Ale                       Winter Warmer                             Witbier 
+##                                  20                                   1                                  15                                  51</code></pre>
+<pre><code>##      Style Brewery_id   ABV                   Drink_name Ounces                         Brewery          City State median_IBU_by_style IBU.clean
+## 1 OtherAle         58 0.049      Abbey&#39;s Single (2015- )     12                 Destihl Brewery   Bloomington    IL                  22        22
+## 2 OtherAle         58 0.049 Abbey&#39;s Single Ale (Current)     12                 Destihl Brewery   Bloomington    IL                  22        22
+## 3 OtherAle        361 0.061                  Hot Rod Red     12         Aviator Brewing Company Fuquay-Varina    NC                  30        41
+## 4 OtherAle        553 0.056      Mickey Finn&#39;s Amber Ale     12           Mickey Finn&#39;s Brewery  Libertyville    IL                  30        30
+## 5 OtherAle        102 0.052          Hurricane Amber Ale     12 Coastal Extreme Brewing Company       Newport    RI                  30        24
+## 6 OtherAle         83 0.052    Fat Tire Amber Ale (2011)     12     New Belgium Brewing Company  Fort Collins    CO                  30        18</code></pre>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="BeersAndBrews_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
@@ -1662,35 +1645,25 @@ $(document).ready(function () {
 <li>Generate a confusion matrix via test data to assess the performance of the prediction</li>
 <li>Accuracy ends up being around 0.7137 which is roughly 21% better than the existing random chance that we would have for predicting either 12 or 16 ounces.</li>
 </ol>
-<pre><code>## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV
+<pre><code>## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV
 
-## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV
 
-## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV
 
-## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV
 
-## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV
 
-## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV
 
-## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV
 
-## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV
 
-## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV
 
-## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR,
-## StateWV</code></pre>
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, : These variables have zero variances: StateAR, StateWV</code></pre>
 <pre><code>## Confusion Matrix and Statistics
 ## 
 ##     classifications
